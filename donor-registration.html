@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Registration | Blood Bank Bangladesh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-info">
+                    <span>📞 Emergency: +880 1234-567890</span>
+                </div>
+                <div class="top-links">
+                    <a href="index.html" class="top-link">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <div class="blood-drop"></div>
+                    <div class="brand-info">
+                        <span class="brand-text">BloodBank<span class="bd">BD</span></span>
+                        <span class="brand-tagline">Save Lives Together</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="donor-registration.html" class="nav-link active">Register</a>
+                <a href="blood-request.html" class="nav-link">Request Blood</a>
+                <a href="admin-login.html" class="btn-primary-nav">Admin</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form Section -->
+    <section class="form-section">
+        <div class="container-small">
+            <div class="form-header">
+                <h1>Donor Registration</h1>
+                <p>Join thousands of life-savers. Complete the form below to register as a blood donor.</p>
+            </div>
+
+            <div class="registration-card">
+                <form id="donorRegistrationForm" class="professional-form">
+                    <!-- Progress Indicator -->
+                    <div class="form-progress">
+                        <div class="progress-step active">
+                            <div class="step-circle">1</div>
+                            <span>Personal Info</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle">2</div>
+                            <span>Contact Details</span>
+                        </div>
+                        <div class="progress-step">
+                            <div class="step-circle">3</div>
+                            <span>Medical Info</span>
+                        </div>
+                    </div>
+
+                    <!-- Step 1: Personal Information -->
+                    <div class="form-step active" data-step="1">
+                        <h3 class="step-title">Personal Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span class="required">*</span></label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherName">Father's Name</label>
+                                <input type="text" id="fatherName" name="fatherName" placeholder="Father's name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="motherName">Mother's Name</label>
+                                <input type="text" id="motherName" name="motherName" placeholder="Mother's name">
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth <span class="required">*</span></label>
+                                <input type="date" id="dob" name="dob" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="gender">Gender <span class="required">*</span></label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nid">National ID/Birth Certificate</label>
+                                <input type="text" id="nid" name="nid" placeholder="NID or Birth Certificate No">
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-next">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Contact Details -->
+                    <div class="form-step" data-step="2">
+                        <h3 class="step-title">Contact Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+880 1XXX-XXXXXX" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="altPhone">Alternative Phone</label>
+                                <input type="tel" id="altPhone" name="altPhone" placeholder="+880 1XXX-XXXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="division">Division <span class="required">*</span></label>
+                                <select id="division" name="division" required>
+                                    <option value="">Select Division</option>
+                                    <option value="dhaka">Dhaka</option>
+                                    <option value="chittagong">Chittagong</option>
+                                    <option value="rajshahi">Rajshahi</option>
+                                    <option value="khulna">Khulna</option>
+                                    <option value="barisal">Barisal</option>
+                                    <option value="sylhet">Sylhet</option>
+                                    <option value="rangpur">Rangpur</option>
+                                    <option value="mymensingh">Mymensingh</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="district">District <span class="required">*</span></label>
+                                <select id="district" name="district" required>
+                                    <option value="">Select District</option>
+                                    <option value="dhaka">Dhaka</option>
+                                    <option value="gazipur">Gazipur</option>
+                                    <option value="narayanganj">Narayanganj</option>
+                                    <option value="chittagong">Chittagong</option>
+                                    <option value="sylhet">Sylhet</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="upazila">Upazila/Thana</label>
+                                <input type="text" id="upazila" name="upazila" placeholder="Enter Upazila/Thana">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Full Address <span class="required">*</span></label>
+                            <textarea id="address" name="address" rows="3" placeholder="House/Flat, Road, Area" required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-prev">← Previous</button>
+                            <button type="button" class="btn-next">Next Step →</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Medical Information -->
+                    <div class="form-step" data-step="3">
+                        <h3 class="step-title">Medical & Blood Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bloodGroup">Blood Group <span class="required">*</span></label>
+                                <select id="bloodGroup" name="bloodGroup" required>
+                                    <option value="">Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="weight">Weight (kg) <span class="required">*</span></label>
+                                <input type="number" id="weight" name="weight" placeholder="e.g., 65" min="45" required>
+                                <small class="form-hint">Minimum 45 kg required</small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="lastDonation">Last Donation Date</label>
+                                <input type="date" id="lastDonation" name="lastDonation">
+                                <small class="form-hint">Leave blank if first-time donor</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="totalDonations">Total Donations</label>
+                                <input type="number" id="totalDonations" name="totalDonations" placeholder="0" min="0" value="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="chronicDiseases" name="chronicDiseases">
+                                <span>Do you have any chronic diseases? (Diabetes, Hypertension, Heart Disease, etc.)</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group" id="diseaseDetailsGroup" style="display: none;">
+                            <label for="diseaseDetails">Disease Details</label>
+                            <textarea id="diseaseDetails" name="diseaseDetails" rows="2" placeholder="Please specify"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="currentMedication" name="currentMedication">
+                                <span>Are you currently taking any medication?</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group" id="medicationDetailsGroup" style="display: none;">
+                            <label for="medicationDetails">Medication Details</label>
+                            <textarea id="medicationDetails" name="medicationDetails" rows="2" placeholder="Please specify"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="availability">Availability <span class="required">*</span></label>
+                            <select id="availability" name="availability" required>
+                                <option value="">Select Availability</option>
+                                <option value="always">Always Available</option>
+                                <option value="weekdays">Weekdays Only</option>
+                                <option value="weekends">Weekends Only</option>
+                                <option value="emergency">Emergency Only</option>
+                            </select>
+                        </div>
+
+                        <div class="terms-section">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span>I declare that all information provided is accurate. I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a>.</span>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-prev">← Previous</button>
+                            <button type="submit" class="btn-submit">Submit Registration</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-simple">
+        <div class="container">
+            <p>&copy; 2026 Blood Bank Bangladesh | Developed by <strong>Team Spy</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
