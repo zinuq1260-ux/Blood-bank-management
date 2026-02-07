@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Request | Blood Bank Bangladesh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-info">
+                    <span>📞 Emergency: +880 1234-567890</span>
+                </div>
+                <div class="top-links">
+                    <a href="index.html" class="top-link">← Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <div class="blood-drop"></div>
+                    <div class="brand-info">
+                        <span class="brand-text">BloodBank<span class="bd">BD</span></span>
+                        <span class="brand-tagline">Save Lives Together</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="donor-registration.html" class="nav-link">Register</a>
+                <a href="blood-request.html" class="nav-link active">Request Blood</a>
+                <a href="admin-login.html" class="btn-primary-nav">Admin</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blood Request Form Section -->
+    <section class="form-section">
+        <div class="container-small">
+            <div class="form-header">
+                <div class="urgent-badge">🚨 URGENT REQUEST</div>
+                <h1>Blood Request Form</h1>
+                <p>Fill out this form to request blood. Our team will match you with available donors immediately.</p>
+            </div>
+
+            <div class="registration-card">
+                <form id="bloodRequestForm" class="professional-form">
+                    
+                    <!-- Patient Information -->
+                    <div class="form-section-header">
+                        <h3>Patient Information</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patientName">Patient Name <span class="required">*</span></label>
+                            <input type="text" id="patientName" name="patientName" placeholder="Enter patient's full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="patientAge">Age <span class="required">*</span></label>
+                            <input type="number" id="patientAge" name="patientAge" placeholder="Age" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="patientGender">Gender <span class="required">*</span></label>
+                            <select id="patientGender" name="patientGender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="relationship">Relationship with Patient <span class="required">*</span></label>
+                            <select id="relationship" name="relationship" required>
+                                <option value="">Select Relationship</option>
+                                <option value="self">Self</option>
+                                <option value="parent">Parent</option>
+                                <option value="spouse">Spouse</option>
+                                <option value="child">Child</option>
+                                <option value="sibling">Sibling</option>
+                                <option value="relative">Relative</option>
+                                <option value="friend">Friend</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Blood Requirements -->
+                    <div class="form-section-header">
+                        <h3>Blood Requirements</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="requiredBloodGroup">Required Blood Group <span class="required">*</span></label>
+                            <select id="requiredBloodGroup" name="requiredBloodGroup" required>
+                                <option value="">Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="unitsRequired">Units Required (Bags) <span class="required">*</span></label>
+                            <input type="number" id="unitsRequired" name="unitsRequired" placeholder="Number of bags" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="requiredDate">Required Date <span class="required">*</span></label>
+                            <input type="date" id="requiredDate" name="requiredDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="urgency">Urgency Level <span class="required">*</span></label>
+                            <select id="urgency" name="urgency" required>
+                                <option value="">Select Urgency</option>
+                                <option value="emergency">Emergency (Within 6 hours)</option>
+                                <option value="urgent">Urgent (Within 24 hours)</option>
+                                <option value="scheduled">Scheduled (2-7 days)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason for Blood Requirement <span class="required">*</span></label>
+                        <select id="reason" name="reason" required>
+                            <option value="">Select Reason</option>
+                            <option value="surgery">Surgery</option>
+                            <option value="accident">Accident/Trauma</option>
+                            <option value="thalassemia">Thalassemia</option>
+                            <option value="cancer">Cancer Treatment</option>
+                            <option value="anemia">Severe Anemia</option>
+                            <option value="pregnancy">Pregnancy/Delivery</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medicalDetails">Medical Details/Notes</label>
+                        <textarea id="medicalDetails" name="medicalDetails" rows="3" placeholder="Additional medical information..."></textarea>
+                    </div>
+
+                    <!-- Hospital Information -->
+                    <div class="form-section-header">
+                        <h3>Hospital Information</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="hospitalName">Hospital/Clinic Name <span class="required">*</span></label>
+                            <input type="text" id="hospitalName" name="hospitalName" placeholder="Enter hospital name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hospitalDistrict">Hospital District <span class="required">*</span></label>
+                            <select id="hospitalDistrict" name="hospitalDistrict" required>
+                                <option value="">Select District</option>
+                                <option value="dhaka">Dhaka</option>
+                                <option value="chittagong">Chittagong</option>
+                                <option value="sylhet">Sylhet</option>
+                                <option value="rajshahi">Rajshahi</option>
+                                <option value="khulna">Khulna</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hospitalAddress">Hospital Address <span class="required">*</span></label>
+                        <textarea id="hospitalAddress" name="hospitalAddress" rows="2" placeholder="Full hospital address" required></textarea>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="form-section-header">
+                        <h3>Contact Information</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contactName">Contact Person Name <span class="required">*</span></label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Contact Phone <span class="required">*</span></label>
+                            <input type="tel" id="contactPhone" name="contactPhone" placeholder="+880 1XXX-XXXXXX" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="alternatePhone">Alternate Phone</label>
+                            <input type="tel" id="alternatePhone" name="alternatePhone" placeholder="+880 1XXX-XXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@example.com">
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="previousDonor" name="previousDonor">
+                            <span>Is the patient a registered blood donor?</span>
+                        </label>
+                    </div>
+
+                    <div class="alert-box info">
+                        <strong>Important:</strong> Please ensure all information is accurate. Our team will verify and contact you shortly with available donors.
+                    </div>
+
+                    <div class="terms-section">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="requestTerms" name="requestTerms" required>
+                            <span>I confirm that all information provided is accurate and I agree to the <a href="#">terms of service</a>.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions center">
+                        <button type="submit" class="btn-submit-large">Submit Blood Request</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-simple">
+        <div class="container">
+            <p>&copy; 2026 Blood Bank Bangladesh | Developed by <strong>Team Spy</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
